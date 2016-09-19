@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS while_procedure;
 CREATE DEFINER = 'root'@'localhost'
 PROCEDURE while_procedure()
 BEGIN
