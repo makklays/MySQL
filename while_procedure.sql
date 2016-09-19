@@ -1,7 +1,7 @@
 CREATE DEFINER = 'root'@'localhost'
 PROCEDURE while_procedure()
 BEGIN
-    DECLARE i INT;
+    DECLARE i INT; 
     SET i = 1;
 
     WHILE i < 1000 DO
