@@ -1,0 +1,43 @@
+
+Пример таблицы Artists:
+
+Singer 	          Album 	                          Year 	  Sale
+--------------------------------------------------------------------
+The Prodigy 	    Invaders Must Die 	              2008 	  1200000
+Drowning Pool 	  Sinner 	                          2001 	  400000
+Massive Attack 	  Mezzanine 	                      1998 	  2300000
+The Prodigy 	    Fat of the Land 	                1997 	  600000
+The Prodigy 	    Music For The Jilted Generation 	1994 	  1500000
+Massive Attack 	  100th Window 	                    2003 	  1200000
+Drowning Pool 	  Full Circle 	                    2007 	  800000
+Massive Attack 	  Danny The Dog 	                  2004 	  1900000
+Drowning Pool 	  Resilience 	                      2013 	  500000
+
+Примеры с Having и Group by (сложные запросы:) ):
+- Вывести название исполнителей (singer) число продаж альбомов (sale) которого больше 2000000: 
+
+SELECT singer, sum(sale) 
+FROM `artists` 
+GROUP BY singer 
+HAVING sum(sale) > 2000000 
+
+результат:
+
+singer 	          sum(sale)
+----------------------------
+Massive Attack 	  5400000
+The Prodigy 	    3300000
+
+- Вывести название исполнителя, который исполнялся еще до 1995 года
+
+SELECT singer, min(year) 
+FROM artists
+GROUP BY singer 
+HAVING min(year) < 1995
+
+результат:
+
+singer 	      min(year) 
+------------------------
+The Prodigy 	1994
+
