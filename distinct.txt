@@ -1,0 +1,20 @@
+
+DISTINCT - указывает на то, что нужно работать только с уникальными значениями из выборки
+
+Пример:
+
+Singer 	          Album 	                          Year 	  Sale
+--------------------------------------------------------------------
+The Prodigy 	    Invaders Must Die 	              2008 	  1200000
+Massive Attack 	  Mezzanine 	                      1998 	  2300000
+The Prodigy 	    Fat of the Land 	                1997 	  600000
+The Prodigy 	    Music For The Jilted Generation 	1994 	  1500000
+Massive Attack 	  100th Window 	                    2003 	  1200000
+Massive Attack 	  Danny The Dog 	                  2004 	  1900000
+
+SELECT DISTINCT singer FROM `artists` 
+
+singer 	
+---------------
+The Prodigy
+Massive Attack
