@@ -1,2 +1,2 @@
 # mysql
-Examples of code for a MySQL
+Examples of code on creating triggers, functions and procedures in MySQL.
